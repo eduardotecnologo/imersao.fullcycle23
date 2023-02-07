@@ -1,10 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
-	"github.com/eduardotecnologo/imersao.fullcycle23/application/route"
+	"github.com/eduardotecnologo/imersao.fullcycle23/infra/kafka"
 	"github.com/joho/godotenv"
 )
 
@@ -16,11 +15,17 @@ func init() {
 }
 
 func main() {
-	route := route.Route{
-		ID:       "1",
-		ClientID: "1",
+	producer := kafka.NewKafkaProducer()
+	kafka.Publish("Ola", "readteste", producer)
+
+	for {
+		_ = 1
 	}
-	route.LoadPositions()
-	stringjson, _ := route.ExportJsonPositions()
-	fmt.Println(stringjson[0])
+	//	route := route.Route{            02:07:00
+	// 	ID:       "1",
+	// 	ClientID: "1",
+	// }
+	// route.LoadPositions()
+	// stringjson, _ := route.ExportJsonPositions()
+	// fmt.Println(stringjson[0])
 }
