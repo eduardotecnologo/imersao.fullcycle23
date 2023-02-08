@@ -27,6 +27,10 @@ type PartialRoutePosition struct {
 	Finished bool      `json:"finished"`
 }
 
+func NewRoute() *Route {
+	return &Route{}
+}
+
 // Método para criar uma nova rota
 func (r *Route) LoadPositions() error {
 	// Carrega as posições da rota

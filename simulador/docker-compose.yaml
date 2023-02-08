@@ -8,3 +8,7 @@ services:
       - .:/go/src/
     extra_hosts:
       - "host.docker.internal:10.0.1.29"
+networks:
+  default:
+    external:
+      name: kafka_default
