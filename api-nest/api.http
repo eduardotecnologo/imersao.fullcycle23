@@ -1,0 +1,7 @@
+GET http://127.0.0.1:3001/routes
+
+###
+GET http://127.0.0.1:3001/routes/1/start
+
+###
+GET http://127.0.0.1:3001/routes/2/start

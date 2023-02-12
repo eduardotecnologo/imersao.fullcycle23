@@ -5,7 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { RoutesModule } from './routes/routes.module';
 
-//ESS7 decorators
+//ESS7 decorators - 
 @Module({
   imports: [
     ConfigModule.forRoot(),
